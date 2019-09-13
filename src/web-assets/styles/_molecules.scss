@@ -1,0 +1,49 @@
+ul.recipes-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.summary-item {
+    display: flex;
+    flex-direction: row;
+    height: 13vh;
+    padding: 20px;
+    animation: 300ms cubic-bezier(0.215, 0.610, 0.355, 1) 1 showRecipes;
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        flex-basis: 100%;
+    }
+
+    &__thumb {
+        height: 100%;
+        width: 14vh;
+        object-fit: cover;
+        margin-right: 10px;
+    }
+
+    &__title {
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 4vh;
+    }
+
+    &__cta-section {
+        display: flex;
+    }
+}
+
+@keyframes showRecipes {
+    0% {
+        opacity: 0;
+        height: 0vh;
+    }
+
+    100% {
+        opacity: 1;
+        height: 13vh;
+    }
+}

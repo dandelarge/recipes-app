@@ -1,0 +1,57 @@
+@import './web-assets/styles';
+
+body {
+  margin: 0;
+  font-family: $font-handwrite;
+  font-size: $font-size-regular-text;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $background--paper;
+}
+
+body, html, #root {
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  padding: 15px;
+}
+
+input[type=text], input[type=number] {
+  background: transparent;
+  border: none;
+  margin: 0 10px;
+  width: 100%;
+}
+
+form {
+  label {
+    font-family: $font-typed;
+    font-size: $font-size-regular-text - 0.5vh;
+    display: block;
+    margin-bottom: 8vh;
+
+    &::after {
+      content: " ";
+      display: block;
+      width: 100%;
+      height: 1px;
+      position: relative;
+      top: -1.5vh;
+      border-bottom: 1px solid $color-border-satanic;
+    }
+
+    input {
+      font-family: $font-handwrite;
+      font-size: $font-size-regular-text + 1vh;
+
+    }
+
+    textarea {
+      width: 100%;
+      border: none;
+      background: transparent;
+    }
+  }
+}

@@ -1,0 +1,104 @@
+.recipes-title {
+    font-family: $font-typed;
+    text-transform: uppercase;
+    display: flex;
+    align-self: center;
+}
+
+.icon {
+    width: $font-size-regular-text - 1vh;
+    height: $font-size-regular-text - 1vh;
+    display: inline-block;
+    margin: 0 0 0 15px;
+    &--vegan {
+        background-image: $icon--veggie;
+    }
+}
+
+button.cta-button {
+    //text-transform: uppercase;
+    font-size: 3vh;
+    line-height: 3.3vh;
+    width: 100px;
+    border: none;
+    border-bottom: solid 1px #666;
+    border-bottom-left-radius: 5px;
+    background-color: transparent;
+    margin: 0 10px;
+    font-family: 'momsdinner';
+    height: 3.5vh;
+
+    &::before {
+        content: " ";
+        border-top-right-radius: 5px;
+        border-top: 1px solid $color-border-satanic;
+        display: block;
+        height: 0.5vh;
+        position: relative;
+        bottom: -3.2vh;
+        width: calc(100% + 10px);
+        transition: 300ms bottom;
+    }
+
+    &:hover {
+        &::before {
+            bottom: 0;
+        }
+    }
+
+    &--wide {
+        width: 100%;
+    }
+
+    &:first-child {
+        margin-left: 0;
+    }
+}
+
+input{
+    &[type=text].form-input{
+        &--small {
+            width: 150px;
+            margin: 0 15px;
+        }
+        &--tiny {
+            width: 50px;
+            margin: 0 10px;
+        }
+    }
+
+    &[type=number].form-input{
+        &--small {
+            width: 100px;
+            margin: 0 15px;
+        }
+        &--tiny {
+            width: 50px;
+            margin: 0 10px;
+        }
+    }
+
+    &[type=checkbox] {
+        background: transparent;
+        display: inline-block;
+        border: 1px solid;
+        width: 2vh;
+        height: 2vh;
+        margin: 3px 15px;
+        -webkit-appearance: unset;
+
+        &:checked {
+            background: black;
+            border: 2px solid white;
+            box-shadow: 0px 0px 0 1px;
+        }
+    }
+}
+
+.recipe-image {
+    width: 100%;
+}
+
+.margin-bottom {
+    margin-bottom: 30px;
+}

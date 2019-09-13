@@ -1,0 +1,18 @@
+.dashboard {
+    display: grid;
+    grid-template-rows: 1fr 10vh;
+    grid-template-areas:
+        "recipes"
+        "actions";
+
+    section.recipes {
+        grid-area: recipes;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    section.actions {
+        grid-area: actions;
+    }
+}
