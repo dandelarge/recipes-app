@@ -3,7 +3,10 @@ import {Link} from 'react-router-dom';
 
 function SummaryItem(props) {
 
-    const {slug, dishName, rationsMin, rationsMax, isVeggie, image} = props;
+    const {
+        slug, dishName,
+        rationsMin, rationsMax,
+        isVeggie, image} = props;
 
     return(
         <li className="summary-item">
@@ -19,7 +22,9 @@ function SummaryItem(props) {
                     { !isVeggie || <span><i className="icon icon--vegan"></i> Vegeratian</span> }
                 </div>
                 <div className="summary-item__cta-section">
-                    <button className="cta-button cta-button--edit">edit</button>
+                    <Link to={`/recipes/edit/${slug}`}>
+                        <button className="cta-button cta-button--edit">edit</button>
+                    </Link>
                     <button className="cta-button cta-button--delete">delete</button>
                 </div>
             </div>

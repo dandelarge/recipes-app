@@ -12,7 +12,8 @@ function InputGroup(props) {
                     className={`form-input form-input--${input.className || 'tiny'}`}
                     name={input.name}
                     type={input.type}
-                    placeholder={input.placeholder}/>
+                    placeholder={input.placeholder}
+                />
             </span>
         )
     );

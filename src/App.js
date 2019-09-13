@@ -11,6 +11,7 @@ function App() {
       <Route path="/" exact component={Dashboard} />
       <Route path="/recipes/create" exact component={EditRecipe} />
       <Route path="/recipes/view/:slug" component={ViewRecipe} />
+      <Route path="/recipes/edit/:slug" component={EditRecipe} />
     </BrowserRouter>
   );
 }
