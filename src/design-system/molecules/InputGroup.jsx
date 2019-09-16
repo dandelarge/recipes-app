@@ -1,5 +1,4 @@
 import React from 'react';
-import IngredientsInputs from './IngredientsInputs';
 
 function InputGroup(props) {
     const {list} = props;
@@ -13,6 +12,7 @@ function InputGroup(props) {
                     name={input.name}
                     type={input.type}
                     placeholder={input.placeholder}
+                    value={input.value}
                 />
             </span>
         )

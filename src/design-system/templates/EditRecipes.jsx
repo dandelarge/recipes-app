@@ -6,17 +6,14 @@ import recipesService from '../../helpers/recipesService';
 
 function EditRecipe(props) {
     const {match} = props;
-
-    console.log(match.params);
-
     const recipe = recipesService().getRecipe(match.params.slug);
     const {dishName, image, isVeggie,
         rationsMin, rationsMax, ingredients,
         instructions} = recipe;
 
     const rationInputs = [
-        {label: 'from', name: 'rationsMin', type: 'number'},
-        {label: 'to', name: 'rationsMax', type: 'number'}
+        {label: 'from', name: 'rationsMin', type: 'number', value:rationsMin},
+        {label: 'to', name: 'rationsMax', type: 'number', value:rationsMax}
     ]
 
     return (
@@ -36,10 +33,10 @@ function EditRecipe(props) {
                     Is this dish Vegetarian?
                 </TextInput>
                 <h4 className="recipes-title">Now list the ingredients!</h4>
-                <IngredientsInputs></IngredientsInputs>
+                <IngredientsInputs ingredients={ingredients}></IngredientsInputs>
                 <label htmlFor="instructions">
                     <p>How do you cook it?</p>
-                    <textarea name="instructions" id="instructions" cols="30" rows="10"></textarea>
+                    <textarea name="instructions" id="instructions" cols="30" rows="10" value={instructions}></textarea>
                 </label>
 
                 <button type="submit" className="cta-button cta-button--wide">SAVE</button>
